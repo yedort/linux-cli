@@ -1,1 +1,1 @@
-cd .local/share/Trash/;cd files;rm -rf *
+cd .local/share/Trash;cd files;rm -rf *
