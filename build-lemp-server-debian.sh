@@ -1,4 +1,4 @@
-# grant root permissions for the next commands (required if not logged in with the username root)
+# grant sudo permissions (if not logged in as root)
 sudo su
 
 # change root password (optional)
