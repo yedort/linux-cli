@@ -1,4 +1,4 @@
-# grant sudo permissions (if not logged in as root)
+# switch to the user root
 sudo su
 
 # change root password (optional)
