@@ -1,1 +1,1 @@
-rm -rf ~/.local/share/Trash/*
+rm -rf ~/.local/share/Trash/files/*
