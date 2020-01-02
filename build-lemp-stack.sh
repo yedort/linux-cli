@@ -7,8 +7,8 @@ passwd root
 # update resources
 apt update
 
-# install nginx, php 5.6, php 7.3, git, composer, mysql, phpmyadmin, ftp (vsftpd), firewall (ufw)
-apt -y install software-properties-common;add-apt-repository ppa:ondrej/php;apt update;apt -y install nginx php5.6-fpm php5.6-mysql php5.6-curl php5.6-mbstring php5.6-xml php5.6-zip php7.3-fpm php7.3-mysql php7.3-curl php7.3-mbstring php7.3-xml php7.3-zip mysql-server ufw vsftpd phpmyadmin git composer;apt dist-upgrade
+# install nginx, php 5.6, php 7.4, git, composer, mysql, phpmyadmin, ftp (vsftpd), firewall (ufw)
+apt -y install software-properties-common;add-apt-repository ppa:ondrej/php;apt update;apt -y install nginx php5.6-fpm php5.6-mysql php5.6-curl php5.6-mbstring php5.6-xml php5.6-zip php7.4-fpm php7.4-mysql php7.4-curl php7.4-mbstring php7.4-xml php7.4-zip mysql-server ufw vsftpd phpmyadmin git composer;apt dist-upgrade
 
 # link phpmyadmin to the home directory
 ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
