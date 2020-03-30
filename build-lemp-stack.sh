@@ -1,4 +1,4 @@
-# switch to the user root
+# switch to the root/superuser
 sudo su
 
 # change root password (optional)
@@ -8,9 +8,9 @@ passwd root
 apt update
 
 # install nginx, php 5.6, php 7.4, git, composer, mysql, phpmyadmin, ftp (vsftpd), firewall (ufw)
-apt -y install software-properties-common;add-apt-repository ppa:ondrej/php;apt update;apt -y install nginx php5.6-fpm php5.6-mysql php5.6-curl php5.6-mbstring php5.6-xml php5.6-zip php7.4-fpm php7.4-mysql php7.4-curl php7.4-mbstring php7.4-xml php7.4-zip mysql-server ufw vsftpd phpmyadmin git composer;apt dist-upgrade
+apt -y install software-properties-common;add-apt-repository ppa:ondrej/php;apt update;apt -y install nginx php5.6-fpm php5.6-mysql php5.6-curl php5.6-mbstring php5.6-xml php5.6-zip php7.4-fpm php7.4-mysql php7.4-curl php7.4-mbstring php7.4-xml php7.4-zip mysql-server ufw vsftpd phpmyadmin git composer;apt -y dist-upgrade
 
-# link phpmyadmin to the home directory
+# link phpmyadmin to the server directory
 ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 
 # add user for ftp (optional)
