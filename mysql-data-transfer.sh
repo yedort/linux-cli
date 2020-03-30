@@ -1,5 +1,5 @@
 #!/bin/bash
-###
+
 if (( $# != 1 && $# != 3 )) || [[ $1 != 'import' && $1 != 'export' ]] || ( (( $# == 3 )) && [[ $2 != '-u' ]] );then
   echo 'Wrong arguments'
   echo 'Usage:'
