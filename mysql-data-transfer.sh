@@ -22,7 +22,9 @@ if [[ $1 == 'export' ]];then
   mapfile databases < <(mysql --login-path=mysqldatatransfer -se "SHOW DATABASES")
   unset databases[0]
   for database in ${databases[@]};do
-    mysqldump --login-path=mysqldatatransfer $database > databases/$database.sql
+    if [[ $database != 'sys' && $database != 'information_schema' && $database != 'performance_schema' && $database != 'mysql' ]];then
+      mysqldump --login-path=mysqldatatransfer $database > databases/$database.sql
+    fi
   done
 else
   mysql_config_editor set --login-path=mysqldatatransfer --host=localhost --user=$USER --password
