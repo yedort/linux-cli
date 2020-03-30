@@ -8,10 +8,9 @@ Export: If you specify the user argument, it will proceed for that user's databa
 
 ## Usage:
 
+```
 bash mysql-data-transfer.sh import
-
 bash mysql-data-transfer.sh import -u yedort
-
 bash mysql-data-transfer.sh export
-
 bash mysql-data-transfer.sh export -u yedort
+```
