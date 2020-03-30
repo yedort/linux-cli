@@ -1,4 +1,4 @@
-# Bash script
+# Bash script for quick MySQL database transfers
 
 ## How it works:
 
