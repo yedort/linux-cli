@@ -10,6 +10,9 @@ apt update
 # install nginx, php 5.6, php 7.4, git, composer, mysql, phpmyadmin, ftp (vsftpd), firewall (ufw)
 apt -y install software-properties-common;add-apt-repository ppa:ondrej/php;apt update;apt -y install nginx php5.6-fpm php5.6-mysql php5.6-curl php5.6-mbstring php5.6-xml php5.6-zip php7.4-fpm php7.4-mysql php7.4-curl php7.4-mbstring php7.4-xml php7.4-zip mysql-server ufw vsftpd phpmyadmin git composer;apt -y dist-upgrade
 
+# create a mysql user and grant permissions
+mysql -u root -p -e "CREATE USER yedort;SET PASSWORD FOR yedort = 'a1a1a1a1';GRANT ALL PRIVILEGES ON *.* TO yedort;FLUSH PRIVILEGES"
+
 # link phpmyadmin to the server directory
 ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 
@@ -29,6 +32,3 @@ cp /etc/vsftpd.conf /etc/vsftpd.conf.orig;echo "yedort" | sudo tee -a /etc/vsftp
 
 # ssl installation and settings (optional)
 add-apt-repository ppa:certbot/certbot;apt update;apt -y install python-certbot-nginx;certbot --nginx
-
-# SQL command to set a user in MySQL
-# CREATE USER yedort;SET PASSWORD FOR yedort = 'a1a1a1a1';
