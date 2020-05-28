@@ -4,7 +4,7 @@ sudo su
 # change root password (optional)
 passwd root
 
-# update resources, upgrade default packages and, delete downloaded package archive files
+# update resources, upgrade default packages, remove unneeded packages, delete downloaded package archive files
 apt update;apt -y full-upgrade;apt -y autoclean
 
 # install nginx, php 5.6, php 7.4, git, composer, mysql, phpmyadmin, ftp (vsftpd), firewall (ufw)
