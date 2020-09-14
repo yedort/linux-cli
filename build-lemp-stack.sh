@@ -5,7 +5,7 @@ sudo su
 passwd root
 
 # update resources, upgrade default packages, remove unneeded packages, delete downloaded package archive files
-apt update;apt -y full-upgrade;apt -y autoclean
+apt update;apt -y full-upgrade;apt -y autoremove;apt -y clean;apt -y autoclean
 
 # install nginx, php 5.6, php 7.4, git, composer, mysql, phpmyadmin, ftp (vsftpd), firewall (ufw)
 apt -y install software-properties-common;add-apt-repository ppa:ondrej/php;apt update;apt -y install nginx php5.6-fpm php5.6-cli php5.6-mysql php5.6-curl php5.6-mbstring php5.6-xml php5.6-zip php7.4-fpm php7.4-cli php7.4-mysql php7.4-curl php7.4-mbstring php7.4-xml php7.4-zip git composer mysql-server phpmyadmin vsftpd ufw
